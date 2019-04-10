@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+<font size="2" color="black">
+    <table width="500" height="250" border="5">
+    <table width="500" height="250" cellpadding="5" cellspacing="5" border="1">
+    <tr>
+      <td>Name</td>
+      <td>Place</td>
+      <td>post</td>>
+      <td>pin</td>
+      <td>state</td>>
+      <td>dob</td>
+       <td>Gender</td>
+       <td>phone</td>
+      <td>Email</td>
+    </tr>
+     {% for d in val %}
+
+    <tr>
+        <td>{{d[1]}}</td>
+        <td>{{d[3]}}</td>
+        <td>{{d[4]}}</td>
+        <td>{{d[5]}}</td>
+        <td>{{d[6]}}</td>
+        <td>{{d[7]}}</td>
+        <td>{{d[8]}}</td>
+        <td>{{d[9]}}</td>
+         <td>{{d[10]}}</td>
+    </tr>
+        {% endfor %}
+
+  </table>
+    </table>
+</form>
+</body>
+
+</html>
