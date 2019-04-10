@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+    
+<form id="form1" name="form1" method="post" action="/updateoff">
+  <table width="200" border="1">
+    <tr>
+      <td>Fname</td>
+      <td><label>
+              <input type="text" name="textfield"  value="{{val[2]}}"required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Lname</td>
+      <td><label>
+              <input type="text" name="textfield2" value="{{val[3]}}"required pattern="[A-Z a-z]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>place</td>
+      <td><label>
+              <input type="text" name="textfield3" value="{{val[4]}}"required pattern="[A-Z a-z]{3,25}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Post</td>
+      <td><label>
+              <input type="text" name="textfield4" value="{{val[5]}}"required pattern="[A-Z a-z0-9]{3,25}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>pin</td>
+      <td><label>
+              <input type="text" name="textfield5" value="{{val[6]}}"title="Minimum 6 Numbers needed" required pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td><label>
+              <select name="select" required >
+                  <option value="kerala" {% if val[7]=='kerala' %}selected {% endif %}>kerala</option>
+                  <option value="thamilnad" {% if val[7]=='thamilnad' %}selected {% endif %}>thamilnad</option>
+                  <option value="karnadaka" {% if val[7]=='karnadaka' %}selected {% endif %}>karnadaka</option>>
+                  <option  value="madyapradesh" {% if val[7]=='madyapradesh' %}selected {% endif %}>madyapradesh</option>
+                  <option  value="panjab" {% if val[7]=='panjab' %}selected {% endif %}>panjab</option>
+                  <option  value="hariyana" {% if val[7]=='hariyana' %}selected {% endif %}>hariyana</option>
+                </select>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Dob</td>
+      <td><label>
+              <input type="text" name="textfield6"  value="{{val[8]}}" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><label>
+               <input name="radiobutton" type="radio" value="male" {% if val[9]=='male' %}checked {% endif %}/>
+      male
+      <input name="radiobutton" type="radio" value="female" {% if val[9]=='female' %}checked {% endif %}/>
+      female</label></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><label>
+              <input type="text" name="textfield7"  value="{{val[10]}}"required pattern="[789][0-9]{9}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><label>
+              <input type="text" name="textfield8" value="{{val[11]}}"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+      </label></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><label>
+        <input type="submit" name="Submit" value="update" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+
+</html>
